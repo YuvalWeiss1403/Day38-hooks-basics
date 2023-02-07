@@ -4,14 +4,12 @@ import { useState,useEffect } from 'react';
 import './App.css';
 
 function App() {
-  const [count,setCount] = useState(0);
-  const [stop,setStop] = useState(false);
+  const [count,setCount] = useState<number>(0);
+  const [stop,setStop] = useState<boolean>(false);
 
   useEffect(()=>{
-    if(!stop){
       console.log(count);
-    }
-  },[count,stop]);
+  },[count]);
 
   return (
     <div className="App">
